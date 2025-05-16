@@ -4,6 +4,9 @@ mixin formInput(labelName, type, id)
     label(for=id) #{labelName}
     input(type=type name=id id=id)
 
+block stylesheet
+    link(rel="stylesheet" href="css/home.css")
+
 block content
     h1 Ajouter un élève
     form(method="post")

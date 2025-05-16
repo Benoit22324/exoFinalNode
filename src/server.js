@@ -11,7 +11,7 @@ dotenv.config();
 const { APP_PORT, APP_HOSTNAME } = process.env;
 
 const students = JSON.parse(fs.readFileSync(dataPath, { encoding: "utf8" }));
-const studentList = [...students];
+let studentList = [...students];
 
 const server = http.createServer((req, res) => {
     const url = req.url.replace("/", "");
@@ -73,6 +73,17 @@ const server = http.createServer((req, res) => {
             return
         })
         return
+    }
+
+    if (url.startsWith("delete")) {
+        const name = url.split("/").pop();
+        studentList = studentList.filter((student) => student.name !== name);
+
+		res.writeHead(302, {
+			"location": "/student"
+		})
+		res.end()
+		return
     }
 
     if (studentList.length !== students.length) {

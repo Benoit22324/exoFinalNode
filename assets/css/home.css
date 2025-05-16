@@ -1,0 +1,23 @@
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+.formInputArea {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+}
+form > input,
+.formInputArea input {
+    padding: 0.2em;
+    border-radius: 5px;
+}
+form > input {
+    background-color: rgb(32, 255, 32);
+    border: none;
+}
+form > input:hover {
+    background-color: rgb(103, 255, 103);
+    cursor: pointer;
+}

@@ -1,0 +1,35 @@
+table {
+    width: 20%;
+    border-spacing: 0;
+}
+thead {
+    background-color: rgb(185, 185, 185);
+}
+td {
+    padding: 0.5em;
+    border: 1px solid rgb(37, 37, 37);
+}
+.studentMod,
+.studentDel {
+    padding: 0.4em;
+    color: rgb(37, 37, 37);
+    text-decoration: none;
+    border-radius: 5px;
+}
+.studentMod {
+    background-color: rgb(15, 159, 255);
+}
+.studentMod:hover {
+    background-color: rgb(82, 186, 255);
+}
+.studentDel {
+    background-color: rgb(255, 29, 29);
+}
+.studentDel:hover {
+    background-color: rgb(255, 75, 75);
+}
+.studentRowButton {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+}

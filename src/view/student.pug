@@ -1,9 +1,21 @@
 extends layout/layout.pug
 
+block stylesheet
+    link(rel="stylesheet" href="css/student.css")
+
 block content
     h1 Liste des élèves
-    ul
-        each student in studentList
-            li #{student.name} #{student.birth}
-                button Modifier
-                button X
+    table
+        thead
+            tr
+                td Nom
+                td Date d'anniversaire
+                td
+        tbody
+            each student in studentList
+                tr.studentRow
+                    td #{student.name}
+                    td #{student.birth.split("-").reverse().join("/")}
+                    td.studentRowButton
+                        a.studentMod(href=`/modify/${student.name}`) Modifier
+                        a.studentDel(href=`/delete/${student.name}`) X
