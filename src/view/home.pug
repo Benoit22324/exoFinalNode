@@ -1,0 +1,13 @@
+extends layout/layout.pug
+
+mixin formInput(labelName, type, id)
+    label(for=id) #{labelName}
+    input(type=type name=id id=id)
+
+block content
+    h1 Ajouter un élève
+    form(method="post")
+        div.formInputArea
+            +formInput("Nom", "text", "name")
+            +formInput("Date", "date", "date")
+        input(type="submit")

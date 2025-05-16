@@ -1,0 +1,7 @@
+mixin navlink(path, name)
+    li: a.navlink(href=path) #{name}
+
+header
+    nav.navbar
+        +navlink("/", "Accueil")
+        +navlink("/student", "Élèves")

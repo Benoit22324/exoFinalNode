@@ -1,0 +1,47 @@
+body {
+    margin: 0;
+    box-sizing: border-box;
+}
+main {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+h1 {
+    font-size: 2em;
+}
+
+.navbar {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 1.2em;
+    background-color: rgb(185, 185, 185);
+    gap: 1em;
+}
+.navbar li {
+    list-style-type: none;
+}
+.navlink {
+    padding: 0.5em;
+    font-size: 1.2em;
+    color: rgb(37, 37, 37);
+    font-weight: bold;
+    text-decoration: none;
+}
+.navlink:hover {
+    background-color: rgb(163, 163, 163);
+    border-radius: 10px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+.formInputArea {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+}

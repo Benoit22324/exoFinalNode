@@ -1,0 +1,9 @@
+extends layout/layout.pug
+
+block content
+    h1 Liste des élèves
+    ul
+        each student in studentList
+            li #{student.name} #{student.birth}
+                button Modifier
+                button X
