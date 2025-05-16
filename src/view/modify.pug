@@ -1,0 +1,19 @@
+extends layout/layout.pug
+
+mixin formInput(labelName, type, id, value, hidden)
+    label(for=id hidden=hidden) #{labelName}
+    input(type=type name=id id=id value=value hidden=hidden)
+
+block stylesheet
+    link(rel="stylesheet" href="../css/home.css")
+
+block content
+    h1 Modifier un élève
+    if changes
+        p.toaster Donnée de l'élève modifié.
+    form(method="post")
+        div.formInputArea
+            +formInput("Nom", "text", "name", student.name)
+            +formInput("Date", "date", "date", student.birth)
+            +formInput("oldName", "text", "oldName", student.name, true)
+        input(type="submit")

@@ -34,3 +34,23 @@ h1 {
     background-color: rgb(163, 163, 163);
     border-radius: 10px;
 }
+
+.toaster {
+    color: rgb(32, 255, 32);
+    opacity: 0;
+    animation: dispel 5s;
+    user-select: none;
+    cursor: default;
+}
+
+@keyframes dispel {
+    0% {
+        opacity: 100;
+    }
+    99% {
+        opacity: 100;
+    }
+    100% {
+        opacity: 0;
+    }
+}

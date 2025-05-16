@@ -9,6 +9,8 @@ block stylesheet
 
 block content
     h1 Ajouter un élève
+    if changes
+        p.toaster Nouveau élève ajouté.
     form(method="post")
         div.formInputArea
             +formInput("Nom", "text", "name")
